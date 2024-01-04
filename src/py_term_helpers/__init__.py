@@ -1,4 +1,6 @@
 from os import get_terminal_size, system
+import inspect
+import re
 
 class TermHelper():
     term_size = get_terminal_size().columns
@@ -16,19 +18,16 @@ class TermHelper():
 
     @classmethod
     def star_line(cls, char="*"):
-        print(char * cls.term_size)
+        print(char[0] * cls.term_size)
 
     @classmethod
     def center_string_stars(cls, string, char="*"):
         half_size = (cls.term_size - len(string) - 2) / 2
-        half_stars = char * int(half_size)
+        half_stars = char[0] * int(half_size)
         print(f"{half_stars} {string} {half_stars}")
 
     @classmethod
     def kv_print(cls, obj):
-        import inspect
-        import re
-
         frame = inspect.currentframe()
         try:
             context = inspect.getframeinfo(frame.f_back).code_context
