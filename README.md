@@ -1,8 +1,8 @@
-# py-term-helper
+# py-term-helpers
 
 ## Overview
 
-The **py-term-helper** is a lightweight Python terminal debug helper tool designed to streamline the debugging process for developers. Creates a more dynamic output for the terminal with star lines and any console testing visuals. It provides essential functions and utilities to assist in identifying and resolving issues in Python applications directly from the terminal.
+The **py-term-helpers** is a lightweight Python terminal debug helper tool designed to streamline the debugging process for developers. Creates a more dynamic output for the terminal with star lines and any console testing visuals. It provides essential functions and utilities to assist in identifying and resolving issues in Python applications directly from the terminal.
 
 ## Features
 
@@ -32,7 +32,7 @@ The **py-term-helper** is a lightweight Python terminal debug helper tool design
 1. **Installation:**
 
    ```bash
-   pip install py-term-helper
+   pip install py-term-helpers
    ```
 
 2. **Usage:**
@@ -51,6 +51,6 @@ TermHelper.star_line()
 my_dict = dict({'key': 'value'})
 TermHelper.kv_print(my_dict)
 # Output:
-# 
+# key => 'value'
 
 ```
