@@ -23,7 +23,7 @@ The **py-term-helpers** is a lightweight Python terminal debug helper tool desig
   - Prints the `string` in the center of terminal wide `char` with 2 `.star_line` above and below
   - Essentially: `.star_line() => .center_string_stars() => .star_line()`
 
-- **.top*wrap(string, char="\*"*)** :
+- **.top_wrap(string, char="\*"*)** :
 
   - Clears console and runs `.term_wrap()`
 
@@ -41,20 +41,20 @@ The **py-term-helpers** is a lightweight Python terminal debug helper tool desig
 
 2. **Usage:**
 
-```python
-from py_term_helpers import TermHelper
+  ```python
+    from py_term_helpers import term_wrap, star_line, kv_print
 
-TermHelper.term_wrap("Terminal Wrap")
-# Output:
-# *************************************Terminal Wrap**************************************
+    term_wrap("TerminalWrap")
+    # Output:
+    #****************************TerminalWrap***********************************
 
-TermHelper.star_line()
-# Output:
-# *************************************************************************************
+    star_line()
+    # Output:
+    #***************************************************************************
 
-my_dict = dict({'key': 'value'})
-TermHelper.kv_print(my_dict)
-# Output:
-# key => 'value'
+    my_dict = dict({'key': 'value'})
+    kv_print(my_dict)
+    # Output:
+    # key => 'value'
 
-```
+  ```
