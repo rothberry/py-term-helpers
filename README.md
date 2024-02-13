@@ -1,8 +1,12 @@
-# py-term-helper
+# py-term-helpers
+
+Published package on pypi
+
+https://pypi.org/project/py-term-helpers/
 
 ## Overview
 
-The **py-term-helper** is a lightweight Python terminal debug helper tool designed to streamline the debugging process for developers. Creates a more dynamic output for the terminal with star lines and any console testing visuals. It provides essential functions and utilities to assist in identifying and resolving issues in Python applications directly from the terminal.
+The **py-term-helpers** is a lightweight Python terminal debug helper tool designed to streamline the debugging process for developers. Creates a more dynamic output for the terminal with star lines and any console testing visuals. It provides essential functions and utilities to assist in identifying and resolving issues in Python applications directly from the terminal.
 
 ## Features
 
@@ -19,7 +23,7 @@ The **py-term-helper** is a lightweight Python terminal debug helper tool design
   - Prints the `string` in the center of terminal wide `char` with 2 `.star_line` above and below
   - Essentially: `.star_line() => .center_string_stars() => .star_line()`
 
-- **.top*wrap(string, char="\*"*)** :
+- **.top_wrap(string, char="\*"*)** :
 
   - Clears console and runs `.term_wrap()`
 
@@ -32,25 +36,25 @@ The **py-term-helper** is a lightweight Python terminal debug helper tool design
 1. **Installation:**
 
    ```bash
-   pip install py-term-helper
+   pip install py-term-helpers
    ```
 
 2. **Usage:**
 
-```python
-from py_term_helpers import TermHelper
+  ```python
+    from py_term_helpers import term_wrap, star_line, kv_print
 
-TermHelper.term_wrap("Terminal Wrap")
-# Output:
-# *************************************Terminal Wrap**************************************
+    term_wrap("TerminalWrap")
+    # Output:
+    #****************************TerminalWrap***********************************
 
-TermHelper.star_line()
-# Output:
-# *************************************************************************************
+    star_line()
+    # Output:
+    #***************************************************************************
 
-my_dict = dict({'key': 'value'})
-TermHelper.kv_print(my_dict)
-# Output:
-# 
+    my_dict = dict({'key': 'value'})
+    kv_print(my_dict)
+    # Output:
+    # key => 'value'
 
-```
+  ```
