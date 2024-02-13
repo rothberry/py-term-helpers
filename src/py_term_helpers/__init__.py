@@ -2,9 +2,15 @@ from os import get_terminal_size, system
 import inspect
 import re
 
-# class TermHelper():
-term_size = get_terminal_size().columns
+# If in pytest will sometimes throw "OSError: [Errno 25] Inappropriate ioctl for device" on .get_terminal_size()
+term_size = 0
+try:
+    term_size = get_terminal_size().columns
+except:
+    term_size = 80
 
+def terminal_size():
+    return term_size
 
 def top_wrap(string, char="*"):
     system("clear")
